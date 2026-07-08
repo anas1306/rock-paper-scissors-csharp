@@ -1,16 +1,4 @@
-﻿ // function getComputerChoice() {
- //     randomNum = Math.random()
- //     if (randomNum < 0.33) {
- //         computerChoice = "Rock";
- //     } else if (randomNum >= 0.33 && randomNum <= 0.66) {
- //         computerChoice = "Paper";
- //     } else if (randomNum > 0.66) {
- //         computerChoice = "Scissors";
- //     }
- //     return computerChoice;
- // }
- 
-static string GetComputerChoice() {
+﻿static string GetComputerChoice() {
     Random random = new Random();
     int choice = random.Next(1, 4);
     if (choice == 1) {
@@ -22,3 +10,10 @@ static string GetComputerChoice() {
     } 
 } 
 Console.WriteLine(GetComputerChoice());
+
+static string GetUserChoice() {
+    Console.WriteLine("Rock, paper, scissors: ");
+    string input = Console.ReadLine()?.Trim() ?? "";
+    return input.ToUpper();
+}
+Console.WriteLine(GetUserChoice());
